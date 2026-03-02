@@ -1,0 +1,397 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 64px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.logoArea {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.navLinks {
+    display: flex;
+    gap: 32px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.navLinks a:hover {
+    color: var(--text-main);
+}
+
+.techLogos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 140px 64px 60px;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle at top right, rgba(26, 32, 44, 1) 0%, rgba(13, 14, 18, 1) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.heroContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.heroLeft {
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+.headline {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.subheadline {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.widgetSpace {
+    width: 420px;
+}
+
+.widget {
+    background: #15171e;
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+.widgetTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.calendarDay {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.calendarDate {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.calendarDate:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.calendarDate.active {
+    background: var(--primary);
+    color: #000;
+    font-weight: 600;
+}
+
+.timeSlots {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.timeSlot {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.timeSlot:hover {
+    border-color: var(--primary);
+}
+
+.checkboxRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.btnConfirm {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+}
+
+.secureText {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    z-index: 10;
+    position: relative;
+}
+
+.card {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cardIcon {
+    width: 48px;
+    height: 48px;
+    background: rgba(242, 169, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 24px;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.cardSubtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.cardBtn {
+    margin-top: 16px;
+    align-self: flex-start;
+}
+
+.footer {
+    padding: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 64px;
+    z-index: 10;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--bg-color);
+}
+
+.footerCol h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.footerCol p.subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.footerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footerRow span {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.galleryImg {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.contactItem strong {
+    color: white;
+}
+
+.loaderOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #050505;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loaderContent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.loaderText {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    animation: pulseLight 1.5s infinite;
+}
+
+.loaderSubtext {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    animation: heartbeat 2.5s ease-in-out infinite;
+}
+
+.fadeIn {
+    animation: pageFadeIn 1s forwards;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(0.6);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: 1;
+        text-shadow: 0 0 30px rgba(242, 169, 0, 0.8);
+    }
+
+    100% {
+        transform: scale(0.6);
+        opacity: 0.7;
+    }
+}
+
+@keyframes pulseLight {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
