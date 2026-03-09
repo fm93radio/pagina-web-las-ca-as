@@ -13,6 +13,7 @@ export default function EventQuote() {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [date, setDate] = useState('');
+    const [startTime, setStartTime] = useState('14:00');
     const [hours, setHours] = useState(3);
     const [isSaving, setIsSaving] = useState(false);
     const [saveError, setSaveError] = useState(null);
@@ -122,6 +123,7 @@ export default function EventQuote() {
 
 *Detalles del evento:*
 - *Fecha:* ${date}
+- *Hora de inicio:* ${startTime}
 - *Duración Salón:* ${hours} horas
 
 *Servicios Opcionales:*
@@ -205,6 +207,25 @@ Acepto las reglas de la casa y quedo a la espera de confirmación de disponibili
                             value={date}
                             onChange={(e) => setDate(e.target.value)}
                         />
+                    </div>
+                    <div className={styles.inputGroup}>
+                        <span className={styles.label}>Hora de inicio:</span>
+                        <select
+                            className={styles.input}
+                            value={startTime}
+                            onChange={(e) => setStartTime(e.target.value)}
+                        >
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                            <option value="21:00">21:00</option>
+                            <option value="22:00">22:00</option>
+                            <option value="23:00">23:00</option>
+                        </select>
                     </div>
                 </div>
 

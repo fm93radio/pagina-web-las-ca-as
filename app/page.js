@@ -6,7 +6,7 @@ import { supabase } from '../lib/supabaseClient';
 import { format, addDays, startOfMonth, endOfMonth, eachDayOfInterval, isSameDay, isBefore, startOfDay, addMonths, subMonths, getDay } from 'date-fns';
 import { es } from 'date-fns/locale';
 
-const HORARIOS = ['14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00']
+const HORARIOS = ['14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00']
 const DURACION = 60 // minutos
 
 const SPORTS = [
@@ -162,7 +162,7 @@ export default function Home() {
             <div className={styles.heroBg}></div>
             <div className={styles.heroContent}>
               <div className={styles.heroLeft}>
-                <h1 className={styles.headline}>El Mejor <span className="text-primary">Pádel</span><br />Y <span className="text-primary">Fútbol</span> En<br />Tacuarembó.</h1>
+                <h1 className={styles.headline}>Tu espacio para jugar, festejar y encontrarte.</h1>
                 <p className={styles.subheadline}>Reserva en línea, disfruta y desconecta.</p>
               </div>
 
@@ -208,7 +208,7 @@ export default function Home() {
 
                   {/* Calendario */}
                   <div className={styles.calendarGrid}>
-                    {['D','L','M','M','J','V','S'].map((d, i) => (
+                    {['D', 'L', 'M', 'M', 'J', 'V', 'S'].map((d, i) => (
                       <div key={i} className={styles.calendarDay}>{d}</div>
                     ))}
                     {/* Espacios vacíos al inicio */}
