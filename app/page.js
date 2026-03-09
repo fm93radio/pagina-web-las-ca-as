@@ -368,6 +368,36 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Comunidad CTA */}
+          <section style={{
+            margin: '60px 20px',
+            padding: '60px 20px',
+            textAlign: 'center',
+            background: 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(242,169,0,0.05) 100%)',
+            border: '1px solid rgba(255,255,255,0.05)',
+            borderRadius: '24px'
+          }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '12px', color: 'white', fontWeight: 800 }}>
+              Comunidad Las Cañas
+            </h2>
+            <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.2rem', fontWeight: 500 }}>
+              Partidos &middot; Jugadores &middot; Torneos &middot; Ranking
+            </p>
+            <Link href="/comunidad" style={{
+              display: 'inline-block',
+              padding: '16px 40px',
+              fontSize: '1.1rem',
+              background: 'var(--primary)',
+              color: '#000',
+              fontWeight: 700,
+              borderRadius: '12px',
+              textDecoration: 'none',
+              boxShadow: '0 4px 14px rgba(242, 169, 0, 0.3)'
+            }}>
+              Entrar a la comunidad
+            </Link>
+          </section>
+
           {/* Footer */}
           <footer className={styles.footer}>
             <div className={styles.footerCol}>
