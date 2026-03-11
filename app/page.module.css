@@ -395,3 +395,97 @@
         opacity: 1;
     }
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 16px 20px;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .navLinks {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 100px 20px 40px;
+    }
+
+    .heroContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .heroLeft {
+        margin-top: 0;
+        margin-bottom: 32px;
+    }
+
+    .headline {
+        font-size: 2.5rem;
+    }
+
+    .subheadline {
+        font-size: 1.1rem;
+    }
+
+    .widgetSpace {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .widget {
+        padding: 24px 16px;
+    }
+
+    .calendarHeader {
+        font-size: 0.8rem;
+    }
+
+    .calendarDay {
+        font-size: 0.75rem;
+    }
+
+    .calendarDate {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+
+    .timeSlot {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .cardsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 40px 20px;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footerRow {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .contactInfo {
+        align-items: center;
+    }
+
+    .loaderText {
+        font-size: 1.5rem;
+    }
+
+    .loaderSubtext {
+        font-size: 2.5rem;
+    }
+}
