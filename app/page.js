@@ -10,7 +10,7 @@ const HORARIOS = ['14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00',
 const DURACION = 60 // minutos
 
 const SPORTS = [
-  { id: null, label: 'Pádel', emoji: '🏓' },
+  { id: null, label: 'Pádel', emoji: '🎾' },
   { id: null, label: 'Fútbol 5', emoji: '⚽' },
 ]
 
@@ -339,7 +339,9 @@ export default function Home() {
             <div className={styles.cardsContainer}>
               <div className={`glass-panel ${styles.card}`}>
                 <div className={styles.cardHeader}>
-                  <div className={styles.cardIcon}>🏓</div>
+                  <div className={styles.cardIcon} style={{ background: 'transparent' }}>
+                    <img src="/paletas.png" alt="Pádel" width="40" height="40" style={{ objectFit: 'contain' }} />
+                  </div>
                   <div>
                     <h3 className={styles.cardTitle}>Pádel</h3>
                     <p className={styles.cardSubtitle}>Cancha Premium</p>
@@ -409,11 +411,11 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.footerCol}>
-              <h3>Experiencia Las Cañas</h3>
-              <p className={styles.subtitle}>Fotos de grupos, Tercer tiempo</p>
+              <h3>Instalaciones</h3>
+              <p className={styles.subtitle}>Fútbol y Pádel de máximo nivel</p>
               <div className={styles.gallery}>
-                <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?auto=format&fit=crop&q=80&w=400" className={styles.galleryImg} alt="Group 1" />
-                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&q=80&w=400" className={styles.galleryImg} alt="Group 2" />
+                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=400" className={styles.galleryImg} alt="Fútbol 5" />
+                <img src="https://images.unsplash.com/photo-1628001604900-52aff8f3bcfc?auto=format&fit=crop&q=80&w=400" className={styles.galleryImg} alt="Pádel" />
               </div>
             </div>
             <div className={styles.footerCol}>
@@ -423,7 +425,7 @@ export default function Home() {
               </p>
               <div style={{ width: '100%', height: '180px', borderRadius: '12px', overflow: 'hidden', marginBottom: '16px', border: '1px solid rgba(255,255,255,0.1)' }}>
                 <iframe
-                  src="https://maps.google.com/maps?q=Rivera%20110%2C%20Tacuarembo&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Rivera%20110%2C%20Tacuarembo%2C%20Uruguay&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -431,9 +433,21 @@ export default function Home() {
                   loading="lazy">
                 </iframe>
               </div>
-              <div className={styles.contactInfo}>
-                <div className={styles.contactItem}><strong>Horarios:</strong> Lunes a Domingo, 14:00 - 00:00</div>
-                <div className={styles.contactItem}><strong>Tel:</strong> +598 99 123 456</div>
+              <div className={styles.contactInfo} style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '16px' }}>
+                <div className={styles.contactItem} style={{ alignItems: 'flex-start', gap: '12px' }}>
+                  <span style={{ fontSize: '1.2rem' }}>🕒</span>
+                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span style={{ color: 'white', fontWeight: 'bold' }}>Horarios</span>
+                    <span style={{ color: 'var(--text-muted)' }}>Lunes a Domingo, 14:00 - 00:00</span>
+                  </div>
+                </div>
+                <div className={styles.contactItem} style={{ alignItems: 'flex-start', gap: '12px' }}>
+                  <span style={{ fontSize: '1.2rem' }}>📞</span>
+                  <div style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span style={{ color: 'white', fontWeight: 'bold' }}>Teléfono</span>
+                    <span style={{ color: 'var(--text-muted)' }}>+598 99 123 456</span>
+                  </div>
+                </div>
               </div>
             </div>
           </footer>
