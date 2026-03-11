@@ -10,7 +10,7 @@ const HORARIOS = ['14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00',
 const DURACION = 60 // minutos
 
 const SPORTS = [
-  { id: null, label: 'Pádel', emoji: '🎾' },
+  { id: null, label: 'Pádel', emoji: '🏓' },
   { id: null, label: 'Fútbol 5', emoji: '⚽' },
 ]
 
@@ -339,7 +339,7 @@ export default function Home() {
             <div className={styles.cardsContainer}>
               <div className={`glass-panel ${styles.card}`}>
                 <div className={styles.cardHeader}>
-                  <div className={styles.cardIcon}>🎾</div>
+                  <div className={styles.cardIcon}>🏓</div>
                   <div>
                     <h3 className={styles.cardTitle}>Pádel</h3>
                     <p className={styles.cardSubtitle}>Cancha Premium</p>
@@ -419,8 +419,18 @@ export default function Home() {
             <div className={styles.footerCol}>
               <h3>Locación</h3>
               <p className={styles.subtitle} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <span style={{ color: 'var(--primary)' }}>📍</span> Tacuarembó, Uruguay
+                <span style={{ color: 'var(--primary)' }}>📍</span> Rivera 110 entre Lavalleja y Batlle, Tacuarembó
               </p>
+              <div style={{ width: '100%', height: '180px', borderRadius: '12px', overflow: 'hidden', marginBottom: '16px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <iframe
+                  src="https://maps.google.com/maps?q=Rivera%20110%2C%20Tacuarembo&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy">
+                </iframe>
+              </div>
               <div className={styles.contactInfo}>
                 <div className={styles.contactItem}><strong>Horarios:</strong> Lunes a Domingo, 14:00 - 00:00</div>
                 <div className={styles.contactItem}><strong>Tel:</strong> +598 99 123 456</div>
