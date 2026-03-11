@@ -399,9 +399,11 @@
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .navbar {
-        padding: 16px 20px;
+        position: relative;
+        padding: 24px 20px 16px;
         flex-direction: column;
         gap: 16px;
+        background: transparent;
     }
 
     .navLinks {
@@ -411,7 +413,8 @@
     }
 
     .hero {
-        padding: 180px 20px 40px;
+        padding: 40px 20px 40px;
+        min-height: auto;
     }
 
     .heroContent {

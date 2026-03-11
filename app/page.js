@@ -339,7 +339,7 @@ export default function Home() {
             <div className={styles.cardsContainer}>
               <div className={`glass-panel ${styles.card}`}>
                 <div className={styles.cardHeader}>
-                  <div className={styles.cardIcon} style={{ background: 'transparent' }}>
+                  <div className={styles.cardIcon} style={{ background: '#fff', padding: '4px', overflow: 'hidden' }}>
                     <img src="/paletas.png" alt="Pádel" width="40" height="40" style={{ objectFit: 'contain' }} />
                   </div>
                   <div>
@@ -414,7 +414,7 @@ export default function Home() {
               <h3>Instalaciones</h3>
               <p className={styles.subtitle}>Fútbol y Pádel de máximo nivel</p>
               <div className={styles.gallery}>
-                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&q=80&w=400" className={styles.galleryImg} alt="Fútbol 5" />
+                <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&q=80&w=400" className={styles.galleryImg} alt="Fútbol 5" />
                 <img src="https://images.unsplash.com/photo-1628001604900-52aff8f3bcfc?auto=format&fit=crop&q=80&w=400" className={styles.galleryImg} alt="Pádel" />
               </div>
             </div>
@@ -425,7 +425,7 @@ export default function Home() {
               </p>
               <div style={{ width: '100%', height: '180px', borderRadius: '12px', overflow: 'hidden', marginBottom: '16px', border: '1px solid rgba(255,255,255,0.1)' }}>
                 <iframe
-                  src="https://maps.google.com/maps?q=Rivera%20110%2C%20Tacuarembo%2C%20Uruguay&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Rivera%20y%20Lavalleja%2C%20Tacuarembo%2C%20Uruguay&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
