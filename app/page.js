@@ -247,29 +247,49 @@ export default function Home() {
                   {loadingSlots ? (
                     <div style={{ textAlign: 'center', padding: '12px', color: '#888', fontSize: '0.8rem' }}>Cargando horarios...</div>
                   ) : (
-                    <div className={styles.timeSlots}>
-                      {HORARIOS.map(hora => {
-                        const taken = isSlotTaken(hora)
-                        const isSelected = selectedSlot === hora
-                        return (
-                          <div
-                            key={hora}
-                            onClick={() => { if (!taken) { setSelectedSlot(hora); setShowForm(true); setSuccess(false); setError('') } }}
-                            className={styles.timeSlot}
-                            style={{
-                              background: taken ? 'rgba(255,50,50,0.15)' : isSelected ? 'rgba(242,169,0,0.3)' : undefined,
-                              border: taken ? '1px solid rgba(255,50,50,0.3)' : isSelected ? '1px solid #f2a900' : undefined,
-                              color: taken ? '#ff6b6b' : isSelected ? '#f2a900' : undefined,
-                              cursor: taken ? 'not-allowed' : 'pointer',
-                              fontSize: '0.82rem',
-                              textDecoration: taken ? 'line-through' : 'none',
-                              opacity: taken ? 0.6 : 1
-                            }}
-                          >
-                            {hora} — {taken ? 'Ocupado' : 'Disponible'}
-                          </div>
-                        )
-                      })}
+                    <div style={{ marginTop: '12px' }}>
+                      <select
+                        value={selectedSlot || ''}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          if (val) {
+                            setSelectedSlot(val);
+                            setShowForm(true);
+                            setSuccess(false);
+                            setError('');
+                          } else {
+                            setSelectedSlot(null);
+                            setShowForm(false);
+                          }
+                        }}
+                        style={{
+                          width: '100%',
+                          padding: '12px',
+                          borderRadius: '8px',
+                          border: '1px solid #333',
+                          background: '#111',
+                          color: 'white',
+                          fontSize: '0.9rem',
+                          outline: 'none',
+                          cursor: 'pointer',
+                          appearance: 'none',
+                          WebkitAppearance: 'none'
+                        }}
+                      >
+                        <option value="">Selecciona un horario</option>
+                        {HORARIOS.map(hora => {
+                          const taken = isSlotTaken(hora);
+                          return (
+                            <option key={hora} value={hora} disabled={taken}>
+                              {hora} {taken ? '(Ocupado)' : ''}
+                            </option>
+                          );
+                        })}
+                      </select>
+                      {/* Flex icon to indicate dropdown */}
+                      <div style={{ pointerEvents: 'none', position: 'absolute', right: '28px', marginTop: '-32px' }}>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                      </div>
                     </div>
                   )}
 
