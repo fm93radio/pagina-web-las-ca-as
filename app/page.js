@@ -164,6 +164,25 @@ export default function Home() {
               <div className={styles.heroLeft}>
                 <h1 className={styles.headline}>Tu espacio para jugar, festejar y encontrarte.</h1>
                 <p className={styles.subheadline}>Reserva en línea, disfruta y desconecta.</p>
+                <div style={{ marginTop: '24px' }}>
+                  <Link href="/eventos" style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '12px',
+                    padding: '16px 32px',
+                    fontSize: '1.2rem',
+                    background: '#f2a900',
+                    color: '#000',
+                    fontWeight: 800,
+                    borderRadius: '12px',
+                    textDecoration: 'none',
+                    boxShadow: '0 8px 24px rgba(242, 169, 0, 0.4)',
+                    textTransform: 'uppercase'
+                  }}>
+                    <span>🎉</span> Cotizar Evento Privado
+                  </Link>
+                </div>
               </div>
 
               {/* Widget dinámico */}
